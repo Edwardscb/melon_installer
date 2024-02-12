@@ -7,7 +7,7 @@ const serverApp = express();
 const PORT = 8000; // port to run server on
 
 // Serve static files from the game directory
-serverApp.use(express.static(path.join(__dirname, './melonJS/examples/platformer')));
+serverApp.use(express.static(path.join(__dirname, './examples/platformer')));
 
 // Start the server
 serverApp.listen(PORT, () => {
