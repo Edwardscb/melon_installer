@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const express = require('express');
 const path = require('path');
+// const path = require('node:path')
 
 // Create an Express app
 const serverApp = express();
@@ -19,6 +20,7 @@ function createWindow() {
     const mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
+        // webPreferences: { preload: path.join(__dirname, 'preload.js')}
         webPreferences: {
             nodeIntegration: true
         }
